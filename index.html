@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jquery table content align</title>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="lib/jquery.table.content.align.js"></script>
+    <link href="static/screen.css" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body>
+<script type="text/javascript">
+    $(function(){
+        $('.content-table').tableContentAlign({
+            'bottom-align-select': '.bottom',
+            'top-align-selector': '.top',
+            'middle-align-selector': '.mmidle'
+
+        });
+    });
+</script>
+<section class="layout">
+    <table class="content-table columns-5">
+        <tbody >
+        <tr>
+            <td>это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для
+                текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию
+                размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно
+                пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое
+                время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время,
+                программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+            </td>
+            <td>это текст-"рыба" <div class="bottom">asd sadasd</div></td>
+            <td>это текст-"рыба"<div class="bottom">asds adasd</div></td>
+            <td>это текст-"рыба"<div class="bottom">asdsa dasd</div></td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+</body>
+</html>

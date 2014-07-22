@@ -1,0 +1,12 @@
+.layout{
+    margin: 0 auto;
+    width: 978px;
+}
+.content-table{
+    border-collapse: collapse;
+}
+.content-table td{
+    border: 1px solid #dadada;
+    padding: 10px;
+    vertical-align: top;
+}
