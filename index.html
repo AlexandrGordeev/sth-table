@@ -13,24 +13,39 @@
     $(function(){
         $('.content-table').tableContentAlign({
             'bottom-align-select': '.bottom'
-
+        });
+        $('.content-table').tableContentAlign({}).test();
+        $('.delete-me').on('click', function(e){
+            e.preventDefault();
+            $(this).closest('td').remove();
+            return false;
+        });
+        $('.re_init').on('click', function(e){
+            e.preventDefault();
+            $('.content-table').tableContentAlign().setAlign();
+            return false;
         });
     });
 </script>
 <section class="layout">
+    <a class="re_init" href="#">Re init plugin</a>
     <table class="content-table columns-5">
         <tbody >
         <tr>
-            <td>это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для
+            <td> <div class="padding-element">
+                это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для
                 текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию
                 размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно
                 пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое
                 время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время,
                 программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+                <a class="delete-me" href="#">Удалить колонку</a>
+            </div>
+                <div class="bottom">asd sadasd</div>
             </td>
-            <td>это текст-"рыба" <div class="bottom">asd sadasd</div></td>
-            <td>это текст-"рыба"<div class="bottom">asds adasd</div></td>
-            <td>это текст-"рыба"<div class="bottom">asdsa dasd</div></td>
+            <td><div class="padding-element">это текст-"рыба"</div> <div class="bottom">asd sadasd</div></td>
+            <td><div class="padding-element">это текст-"рыба"</div><div class="bottom">asds adasd</div></td>
+            <td><div class="padding-element">это текст-"рыба"</div><div class="bottom">asdsa dasd</div></td>
         </tr>
         </tbody>
     </table>
